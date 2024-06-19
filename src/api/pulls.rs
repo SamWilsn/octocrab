@@ -485,7 +485,7 @@ impl<'octo, 'r> ListCommitsBuilder<'octo, 'r> {
     }
 
     /// Send the actual request.
-    pub async fn send(self) -> crate::Result<crate::Page<crate::models::commits::Commit>> {
+    pub async fn send(self) -> crate::Result<crate::Page<crate::models::commits::PullCommit>> {
         let route = format!(
             "/repos/{owner}/{repo}/pulls/{pr}/commits",
             owner = self.handler.owner,

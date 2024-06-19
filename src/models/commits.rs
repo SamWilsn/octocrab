@@ -129,6 +129,11 @@ pub struct Commit {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct PullCommit {
+    pub commit: CommitElement,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "snake_case")]
 pub enum GithubCommitStatus {
     Ahead,
